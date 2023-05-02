@@ -1,0 +1,81 @@
+---
+title: CV
+name: Elizabeth
+surname: Hare
+position: "Quantitative Geneticist/Owner"
+address: "Dog Genetics LLC, Astoria, NY"
+phone: (718) 530-5575
+pronouns: she/her
+email: "lizhare@gmail.com"
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "Liz Hare provides statistical, genetic, and genomic research services, as well as analyses for selective breeding. Her focus is on integrating research into the operations of working dog programs."  
+output:
+    vitae::markdowncv:
+        theme: davewhipp
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+
+## Employment
+
+### Quantitative Geneticist/Owner, Dog Genetics LLC, Astoria, NY
+
+*Major Contracts:*
+
+``` {r, PVWDC}
+library(tibble)
+tribble(~Org, ~Year, ~What, ~Why,
+    "PennVet Working Dog Center", "2014-2023", "Detector Dog Phenotype-Genotype Project", "Developed anew C-BARQ-based questionnaire for selection and study of detector dogs",
+	"", "", "", "Cleaned and Analyzed data from behavior tests and questionnaires",
+	"", "", "", "Produced organized, documented data sets for collaborators",
+	"", "", "", "Coded and maintained R code for analyses with version control and emphasis on reusability"
+	) %>%
+	detailed_entries(Org, Year, What, Why)
+
+```
+
+## Volunteer Positions
+
+```{r}
+
+tribble(
+  ~Year, ~Position, ~Org,
+  "2022-3", "Director of Data Management and Open Science", "ManyDogs Project",
+  "2022-3", "BookDash Contributor", "The Turing Way",
+  "2019-23", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
+  "2010-20", "Conference Organizer, Grant Writer", "PennVet Working Dog Center"
+) %>%
+    brief_entries(
+    glue::glue("{Position} at {Org}"),
+    Year,
+  )
+
+```
+## Education
+
+```{r}
+
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Ph.D., Genetics", 1998, "George Washington University", "Washington, DC",
+  "BA, Biology", 1991, "Bryn Mawr College", "Bryn Mawr, PA"
+  )  %>%
+  detailed_entries(Degree, Year, Institution, Where)
+  
+```
+
+## Selected Publications
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("vitae", "tibble"), "citations02.bib")
+
+bibliography_entries("citations02.bib") ##%>%
+##  arrange(desc(author$family), issued)
+
+```
+ 
