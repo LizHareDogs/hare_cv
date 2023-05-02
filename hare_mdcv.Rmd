@@ -26,15 +26,17 @@ library(vitae)
 
 *Major Contracts:*
 
-``` {r, PVWDC}
+#### PennVet Working Dog Center (2014-2023)
+
+``` {r, detectorDogPhenoGeno}
 library(tibble)
-tribble(~Org, ~Year, ~What, ~Why,
-    "PennVet Working Dog Center", "2014-2023", "Detector Dog Phenotype-Genotype Project", "Developed anew C-BARQ-based questionnaire for selection and study of detector dogs",
-	"", "", "", "Cleaned and Analyzed data from behavior tests and questionnaires",
-	"", "", "", "Produced organized, documented data sets for collaborators",
-	"", "", "", "Coded and maintained R code for analyses with version control and emphasis on reusability"
-	) %>%
-	detailed_entries(Org, Year, What, Why)
+## tribble(~What, ~Why,
+##     "Detector Dog Phenotype-Genotype Project", "Developed anew C-BARQ-based questionnaire for selection and study of detector dogs",
+## 	"Detector Dog Phenotype-Genotype Project", "Cleaned and Analyzed data from behavior tests and questionnaires",
+## 	"Detector Dog Phenotype-Genotype Project", "Produced organized, documented data sets for collaborators",
+## 	"Detector Dog Phenotype-Genotype Project",, "Coded and maintained R code for analyses with version control and emphasis on reusability"
+##     ) %>%
+## 	detailed_entries(What, Why)
 
 ```
 
@@ -72,7 +74,7 @@ tribble(
 
 ```{r}
 library(dplyr)
-knitr::write_bib(c("vitae", "tibble"), "citations02.bib")
+## knitr::write_bib(c("vitae", "tibble"), "citations02.bib")
 
 bibliography_entries("citations02.bib") ##%>%
 ##  arrange(desc(author$family), issued)
