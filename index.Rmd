@@ -1,0 +1,128 @@
+---
+title: CV
+name: Elizabeth
+surname: Hare
+position: "Quantitative Geneticist/Owner"
+address: "Dog Genetics LLC, Astoria, NY"
+phone: (718) 530-5575
+pronouns: she/her
+email: "lizhare@gmail.com"
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "Liz Hare provides statistical, genetic, and genomic research services, as well as analyses for selective breeding. Her focus is on integrating research into the operations of working dog programs."  
+output:
+    vitae::markdowncv:
+        theme: davewhipp
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+
+## Employment
+
+### Quantitative Geneticist/Owner, Dog Genetics LLC
+
+
+* PennVet Working Dog Center (2014-2023)
+
+    - Detector Dog Phenotype-Genotype Project  
+	
+        + Developed anew C-BARQ-based questionnaire for selection and study of detector dogs  
+	    + Cleaned and Analyzed data from behavior tests and questionnaires  
+	    + Produced organized, documented data sets for collaborators  
+    	+ Wrote and maintained R code for analyses and internal reports with version control and emphasis on reusability  
+	
+    - Long-Term Behavior and Health Surveillance of Search-and_Rescue Dogs Responding to the 9/11 Attacks  
+	
+        + Planned project and obtained funding from the AKC Canine Health Foundation  
+        + Analyzed survival data comparing search-and-rescue dogs who responded to 9/11 with dogs who were not deployed  
+		+ Compared cause of death between deployed and non-deployed dogs  
+		+ Fitted generalized additive models to compare how C-BARQ measures differed between deployed and non-deployed dogs  
+	
+	- Used statistical models to compare C-BARQ traits in dog populations  
+	
+	    + Search-and-rescue and pet dogs  
+		+ Explosive detection and service dogs in a prison puppy program  
+	
+	- Calculated estimated breeding values (EBV) for selective breeding and advised on acceptance of donated dogs
+	
+* Leader Dogs for the Blind (2013-2015)  
+
+    - Cleaned and organized pedigree, behavior, and health data  
+	- Estinated heritabilities of key traits to assess possible results of selection
+	- Calculated estimated breeding values and selection indices used to plan breedings
+	- Taught breeding manager to clean and analyze data and use it to calculate EBVs; provided extensive and detailed written documentation  
+
+* US Department of Homeland Security and TSA Canine Breeding and Development Center (2010-2013)
+    - proposed and received funding for multi-year study of behavior and health genetics and genomics  
+	- Supervised a Research Coordinator who built a database, entered behavior and health data, and collected and shipped DNA samples for genotyping  
+	- Established heritability of work-related behaviors  
+	- Provided EBVss to be used to select dogs with the highest genetic potential for important traits  
+	- Used genotype data to look for genomic regions associated with key behaviors
+	- Collaborated in an analysis to find genomic regions associated with successful completion of training
+
+
+### Previous Positions Held
+
+* Postdoctoral Associate/Research Associate Professor, South Texas Psychiatric Genetics Research Center, San Antonio, TX (2006-2010)  
+
+    - Organized and cleaned data from multi-site international studies including pedigrees, diagnoses, and measured behavioral phenotypes  
+    - Estimated heritabilities of the age of onset of schizophrenia and personality traits in families affected by bipolar disorder  
+    - Provided statistical analyses for studies of genetic linkage and association and behavioral phenotypes (anxiety, substance use)
+	
+* Animal Improvement Programs Laboratory, USDA, Beltsville, MD (2002-2004)  
+
+    - Analyzed rates of participation in dairy phenotype testing  
+	- Characterized the US dairy cattle population by describing trends in length of herd testing participation and calving intervals  
+	
+* Research Associate, Animal Breeding and Genetics Group, Cornell University, Ithaca, NY (1998-2002)  
+
+   - Designed and taught distance education courses in canine and feline genetics
+   - Provided statistical analysis for studies on heritability of catalase levels in rams and and effects of day length on hormone concentration in rabbits  
+
+
+
+## Volunteer Positions
+
+```{r}
+
+tribble(
+  ~Year, ~Position, ~Org,
+  "2022-3", "Director of Data Management and Open Science", "ManyDogs Project",
+  "2022-3", "BookDash Contributor", "The Turing Way",
+  "2019-23", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
+  "2010-20", "Conference Organizer, Grant Writer", "PennVet Working Dog Center"
+) %>%
+    brief_entries(
+    glue::glue("{Position} at {Org}"),
+    Year,
+  )
+
+```
+## Education
+
+```{r}
+
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Ph.D., Genetics", 1998, "George Washington University", "Washington, DC",
+  "BA, Biology", 1991, "Bryn Mawr College", "Bryn Mawr, PA"
+  )  %>%
+  detailed_entries(Degree, Year, Institution, Where)
+  
+```
+
+## Selected Publications
+
+```{r}
+library(dplyr)
+## knitr::write_bib(c("vitae", "tibble"), "citations02.bib")
+
+bibliography_entries("citations02.bib") ##%>%
+##  arrange(desc(author$family), issued)
+
+```
+ 
