@@ -146,8 +146,9 @@ CornellDataFrame %>%
 
 tribble(
   ~Year, ~Position, ~Org,
-  "2022-2023", "Director of Data Management and Open Science", "ManyDogs Project",
-  "2022-2023", "BookDash Contributor", "The Turing Way",
+  "2022-2023", "Assistant Director, Data Management and Open Science", "ManyDogs Project",
+  "2023", "Co-Lead, Accessibility Working Group", "The Turing Way",
+  "2022-2023", "Book Dash Contributor", "The Turing Way",
   "2019-2023", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
   "2010-2020", "Conference Organizer, Grant Writer", "PennVet Working Dog Center"
 ) %>%
