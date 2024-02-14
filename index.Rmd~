@@ -25,6 +25,7 @@ library(tibble)
 
 ### Quantitative Geneticist/Owner, Dog Genetics LLC
 
+
 * PennVet Working Dog Center (2014-2023)
 
     - Detector Dog Phenotype-Genotype Project  
@@ -65,63 +66,23 @@ library(tibble)
 
 
 ### Previous Positions Held
+
+* Postdoctoral Associate/Research Associate Professor, South Texas Psychiatric Genetics Research Center, San Antonio, TX (2006-2010)  
+
+    - Organized and cleaned data from multi-site international studies including pedigrees, diagnoses, and measured behavioral phenotypes  
+    - Estimated heritabilities of the age of onset of schizophrenia and personality traits in families affected by bipolar disorder  
+    - Provided statistical analyses for studies of genetic linkage and association and behavioral phenotypes (anxiety, substance use)
 	
+* Animal Improvement Programs Laboratory, USDA, Beltsville, MD (2002-2004)  
 
-```{r}
-### UT
-UTdataFrame <-
-    tibble(
-        ~Year, ~Position, ~Institution, ~Where, ~Details,
-        "2006-2010", "Postdoctoral Associate/Research Associate Professor",
-        "South Texas Psychiatric Genetics Research Center", "San Antonio, TX",
-        c("Organized and cleaned data from multi-site international studies including pedigrees, diagnoses, and measured behavioral phenotypes",
-          "Estimated heritabilities of the age of onset of schizophrenia and personality traits in families affected by bipolar disorder",
-          "Provided statistical analyses for studies of genetic linkage and association and behavioral phenotypes (anxiety, substance use)"))
-UTdataFrame %>%
-  detailed_entries(
-    where = Position, # first entry, in bold
-    what = Institution, # second entry, in regular text
-    when = Year, # year placed in the margin
-    with = Where, # last entry, in parentheses
-    why = Details # list of items
-  )
+    - Analyzed rates of participation in dairy phenotype testing  
+	- Characterized the US dairy cattle population by describing trends in length of herd testing participation and calving intervals  
+	
+* Research Associate, Animal Breeding and Genetics Group, Cornell University, Ithaca, NY (1998-2002)  
 
-### USDA
-USDAdataFrame <-
-    tribble(
-        ~Year, ~Position, ~Institution, ~Where, ~Details,
-        "2002-2004", "Research Geneticist", "USDA Animal Improvement Programs Laboratory",
-        "Beltsville, MD",
-        c("Analyzed rates of participation in dairy phenotype testing ",
-          "Characterized the US dairy cattle population by describing trends in length of herd testing participation and calving intervals"))
-USDAdataFrame %>%
-  detailed_entries(
-    where = Position, # first entry, in bold
-    what = Institution, # second entry, in regular text
-    when = Year, # year placed in the margin
-    with = Where, # last entry, in parentheses
-    why = Details # list of items
-  )
+   - Designed and taught distance education courses in canine and feline genetics
+   - Provided statistical analysis for studies on heritability of catalase levels in rams and and effects of day length on hormone concentration in rabbits  
 
-
-
-
-### Cornell
-CornellDataFrame <-
-  tribble(
-    ~Year, ~Position, ~Institution, ~Where, ~Details,
-    "1998-2002", "Research Associate", "Animal Breeding and Genetics Group, Cornell University", "Ithaca, NY", c("Designed and taught distance education courses in canine and feline genetics", "Provided statistical analysis for studies on heritability of catalase levels in rams and and effects of day length on hormone concentration in rabbits"))
-
-# resource: https://pkg.mitchelloharawild.com/vitae/reference/cv_entries.html
-CornellDataFrame %>%
-  detailed_entries(
-    where = Position, # first entry, in bold
-    what = Institution, # second entry, in regular text
-    when = Year, # year placed in the margin
-    with = Where, # last entry, in parentheses
-    why = Details # list of items
-  )
-```
 
 
 ## Volunteer Positions
@@ -130,34 +91,27 @@ CornellDataFrame %>%
 
 tribble(
   ~Year, ~Position, ~Org,
-  "2022-2023", "Director of Data Management and Open Science", "ManyDogs Project",
-  "2022-2023", "BookDash Contributor", "The Turing Way",
-  "2019-2023", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
-  "2010-2020", "Conference Organizer, Grant Writer", "PennVet Working Dog Center"
+  "2022-3", "Director of Data Management and Open Science", "ManyDogs Project",
+  "2022-3", "BookDash Contributor", "The Turing Way",
+  "2019-23", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
+  "2010-20", "Conference Organizer, Grant Writer", "PennVet Working Dog Center"
 ) %>%
     brief_entries(
-    #glue::glue("{Position} at {Org}"),
-    what = Position,
-    when = Year,
-    with = Org
+    glue::glue("{Position} at {Org}"),
+    Year,
   )
-```
 
+```
 ## Education
 
 ```{r}
 
 tribble(
-  ~Degree, ~Year, ~Institution, ~Where,
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
   "Ph.D., Genetics", 1998, "George Washington University", "Washington, DC",
   "BA, Biology", 1991, "Bryn Mawr College", "Bryn Mawr, PA"
   )  %>%
-  detailed_entries(
-    where = Degree, 
-    what = Institution,
-    when = Year, 
-    with = Where
-    )
+  detailed_entries(Degree, Year, Institution, Where)
   
 ```
 
