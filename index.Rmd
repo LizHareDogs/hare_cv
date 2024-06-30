@@ -142,14 +142,14 @@ CornellDataFrame %>%
 
 ## Volunteer Positions
 
-```{r}
+```{r, vol}
 
 tribble(
   ~Year, ~Position, ~Org,
-  "2022-2023", "Assistant Director, Data Management and Open Science", "ManyDogs Project",
-  "2023", "Co-Lead, Accessibility Working Group", "The Turing Way",
-  "2022-2023", "Book Dash Contributor", "The Turing Way",
-  "2019-2023", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
+  "2022-2024", "Assistant Director, Data Management and Open Science", "ManyDogs Project",
+  "2023-2024", "Co-Lead, Accessibility Working Group", "The Turing Way",
+  "2022-2024", "Book Dash Contributor", "The Turing Way",
+  "2019-2024", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
   "2010-2020", "Conference Organizer, Grant Writer", "PennVet Working Dog Center"
 ) %>%
     brief_entries(
@@ -158,6 +158,24 @@ tribble(
     when = Year,
     with = Org
   )
+
+```
+
+## Recent Awards and Financial Support
+
+``` {r, awards}
+
+tribble(
+~Year, ~Award, ~Org,
+"2024", "rOpenSci Champions Program", "rOpenSci",
+"2024", "Co-Host of The Turing Way Fireside Chat: Evolving Open Science and Research Software Communities for Accessibility and Inclusion", "Society of Research Software Engineering"
+) %>%
+    brief_entries(
+    #glue::glue("{Position} at {Org}"),
+    what = Award,,
+    when = Year,
+    with = Org
+  ) 
 ```
 
 ## Education
