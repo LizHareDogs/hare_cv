@@ -7,6 +7,8 @@ address: "Dog Genetics LLC, Astoria, NY"
 phone: (718) 530-5575
 pronouns: she/her
 email: "lizhare@gmail.com"
+github: "LizHareDogs"
+linkedin: "liz-hare-phd-1a50925"
 date: "`r format(Sys.time(), '%B %Y')`"
 aboutme: "Liz Hare provides statistical, genetic, and genomic research services, as well as analyses for selective breeding. Her focus is on integrating research into the operations of working dog programs."  
 output:
@@ -32,11 +34,11 @@ DGdataFrame <-
     tribble(
         ~Year, ~Position, ~Institution, ~Where, ~Details,
 		## "Position" will actually be the project here"
-		"2021-2023", "Detector Dog Phenotype-Genotype Project", "PennVet Working Dog Center", 
+		"2021-2024", "Detector Dog Phenotype-Genotype Project", "PennVet Working Dog Center", 
 		"Philadelphia, PA", 
-		c("Developed anew C-BARQ-based questionnaire for selection and study of detector dogs",
-		"Cleaned and Analyzed data from behavior tests and questionnaires",
-	    "Produced organized, documented data sets for collaborators",
+		c("Developed anew C-BARQ-behavior based questionnaire for selection and study of detector dogs",
+		"Cleaned and Analyzed data from behavior tests and questionnaires using applicable linear and non-linear models",
+	    "Produced organized, documented, and reproducible data sets for collaborators",
     	"Wrote and maintained R code for analyses and internal reports with version control and emphasis on reusability"),
 		"2018-2021", "Long-Term Behavior and Health Surveillance of Search-and_Rescue Dogs Responding to the 9/11 Attacks", 
 		"PennVet Working Dog Center", "Philadelphia, PA",
@@ -57,14 +59,14 @@ DGdataFrame <-
 		"Leader Dogs for the Blind", "Rochester Hills, MI",
 		c("Cleaned and organized pedigree, behavior, and health data",
 		"Estimated heritabilities of key traits to assess possible results of selection",
-		"Calculated estimated EBVs and selection indices used to plan breedings",
+		"Calculated EBVs and selection indices used to plan breedings",
 		"Taught breeding manager to clean and analyze data and use it to calculate EBVs; provided extensive and detailed written documentation"),
 		"2010-2013", "Lead, DHS-Funded Genetics and Genomics Project",
 		"TSA Canine Breeding and Development Center", "San Antonio, TX",
 		c("Proposed and received funding for multi-year study of behavior and health genetics and genomics of explosives detector dogs",
 		"Supervised a Research Coordinator who built a database, entered behavior and health data, and collected and shipped DNA samples for genotyping",
 		"Analyzed heritabilities of work-related behaviors",
-		"Provided EBVs and selection indices to identify dogs with the highest genetic potential to retain as breeding stock",
+		"Calculated EBVs and selection indices to identify dogs with the highest genetic potential to retain as breeding stock",
 		"Used genotype data to screen for  genomic regions associated with key behaviors",
 		"Collaborated in an analysis to find genomic regions associated with acceptance for further training"))
 		
