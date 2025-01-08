@@ -36,14 +36,14 @@ DGdataFrame <-
 		## "Position" will actually be the project here"
 		"2021-2024", "Detector Dog Phenotype-Genotype Project", "PennVet Working Dog Center", 
 		"Philadelphia, PA", 
-		c("Developed anew C-BARQ-behavior based questionnaire for selection and study of detector dogs",
+		c("Developed anew C-BARQ-behavior questionnaire for selection and study of detector dogs",
 		"Cleaned and Analyzed data from behavior tests and questionnaires using applicable linear and non-linear models",
-	    "Produced organized, documented, and reproducible data sets for collaborators",
+	    "Produced extensively documented, reproducible data sets for collaborators",
     	"Wrote and maintained R code for analyses and internal reports with version control and emphasis on reusability"),
 		"2018-2021", "Long-Term Behavior and Health Surveillance of Search-and_Rescue Dogs Responding to the 9/11 Attacks", 
 		"PennVet Working Dog Center", "Philadelphia, PA",
 		c("Planned project and obtained funding from the AKC Canine Health Foundation",
-		"Analyzed survival data comparing search-and-rescue dogs who responded to 9/11 with dogs who were not deployed",
+		"Analyzed survival data comparing search-and-rescue dogs that responded to 9/11 with non-deployed dogs ",
 		"Compared causes of death between deployed and non-deployed dogs",
 		"Fitted generalized additive models to compare how C-BARQ measures differed between deployed and non-deployed dogs"),
 		"2015-2021", "C-BARQ Traits in Working Dog Populations", "PennVet Working Dog Center",
@@ -53,22 +53,21 @@ DGdataFrame <-
 		"Explosive detection and service dogs in a prison puppy program"),
 		"2015-2023", "Breeding and Selection Advice", "PennVet Working Dog Center",
 		"Philadelphia, PA", 
-		c("Calculated estimated breeding values (EBV) for selectively breeding Labradors", 
-		"Building algorithm to help with decisions on accepting donated dogs"),
+		c("Calculated estimated breeding values (EBV) for selectively breeding odor detection dogs"),
 		"2013-2015", "Genetics Consultation and Teaching", 
 		"Leader Dogs for the Blind", "Rochester Hills, MI",
 		c("Cleaned and organized pedigree, behavior, and health data",
-		"Estimated heritabilities of key traits to assess possible results of selection",
+		"Estimated heritabilities of key traits to assess potential results of selection",
 		"Calculated EBVs and selection indices used to plan breedings",
 		"Taught breeding manager to clean and analyze data and use it to calculate EBVs; provided extensive and detailed written documentation"),
 		"2010-2013", "Lead, DHS-Funded Genetics and Genomics Project",
 		"TSA Canine Breeding and Development Center", "San Antonio, TX",
 		c("Proposed and received funding for multi-year study of behavior and health genetics and genomics of explosives detector dogs",
-		"Supervised a Research Coordinator who built a database, entered behavior and health data, and collected and shipped DNA samples for genotyping",
 		"Analyzed heritabilities of work-related behaviors",
 		"Calculated EBVs and selection indices to identify dogs with the highest genetic potential to retain as breeding stock",
 		"Used genotype data to screen for  genomic regions associated with key behaviors",
-		"Collaborated in an analysis to find genomic regions associated with acceptance for further training"))
+		"Collaborated in an analysis to find genomic regions associated with acceptance for further training",
+    	"Supervised a Research Coordinator who built a database, entered behavior and health data, and collected and shipped DNA samples for genotyping"))
 		
 DGdataFrame %>%
   detailed_entries(
@@ -128,7 +127,9 @@ USDAdataFrame %>%
 CornellDataFrame <-
   tribble(
     ~Year, ~Position, ~Institution, ~Where, ~Details,
-    "1998-2002", "Research Associate", "Animal Breeding and Genetics Group, Cornell University", "Ithaca, NY", c("Designed and taught distance education courses in canine and feline genetics", "Provided statistical analysis for studies on Heritability of catalase levels in rams and and effects of day length on hormone concentration in rabbits"))
+    "1998-2002", "Research Associate", "Animal Breeding and Genetics Group, Cornell University", "Ithaca, NY",
+    c("Designed and taught distance education courses in canine and feline genetics",
+      "Implemented animal model and other statistical analyses for livestock research"))
 
 # resource: https://pkg.mitchelloharawild.com/vitae/reference/cv_entries.html
 CornellDataFrame %>%
@@ -136,8 +137,8 @@ CornellDataFrame %>%
     where = Position, # first entry, in bold
     what = Institution, # second entry, in regular text
     when = Year, # year placed in the margin
-    with = Where, # last entry, in parentheses
-    why = Details # list of items
+    with = Where, # last entry, in parentheses 
+   why = Details # list of items
   )
 ```
 
@@ -148,11 +149,11 @@ CornellDataFrame %>%
 
 tribble(
   ~Year, ~Position, ~Org,
-  "2022-2024", "Assistant Director, Data Management and Open Science", "ManyDogs Project",
-  "2023-2024", "Co-Lead, Accessibility Working Group", "The Turing Way",
-  "2022-2024", "Book Dash Contributor", "The Turing Way",
+  "2022-2025", "Assistant Director, Data Management and Open Science", "ManyDogs Project",
+  "2023-2025", "Co-Lead, Accessibility Working Group", "The Turing Way",
+  "2022-2024", "Book Dash Organizing Committee", "The Turing Way",
   "2019-2024", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
-  "2010-2020", "Conference Organizer, Grant Writer", "PennVet Working Dog Center"
+  "2010-2020", "Conference Organization, Grant Writing", "PennVet Working Dog Center"
 ) %>%
     brief_entries(
     #glue::glue("{Position} at {Org}"),
@@ -169,6 +170,7 @@ tribble(
 
 tribble(
 ~Year, ~Award, ~Org,
+"2024","Highly Commended", "Hidden REF", 
 "2024", "rOpenSci Champions Program", "rOpenSci",
 "2024", "Co-Host of The Turing Way Fireside Chat: Evolving Open Science and Research Software Communities for Accessibility and Inclusion", "Society of Research Software Engineering"
 ) %>%
