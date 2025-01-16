@@ -1,0 +1,213 @@
+---
+title: CV
+name: Elizabeth
+surname: Hare
+position: "Quantitative Geneticist/Owner"
+address: "Dog Genetics LLC, Astoria, NY"
+phone: (718) 530-5575
+pronouns: she/her
+email: "lizhare@gmail.com"
+github: "LizHareDogs"
+linkedin: "liz-hare-phd-1a50925"
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "Liz Hare provides statistical, genetic, and genomic research services, as well as analyses for selective breeding. Her focus is on integrating research into the operations of working dog programs."  
+output:
+    vitae::markdowncv:
+        theme: davewhipp
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+
+## Employment
+
+### Quantitative Geneticist/Owner, Dog Genetics LLC
+
+#### Selected Contracts
+
+``` {r}
+DGdataFrame <-
+    tribble(
+        ~Year, ~Position, ~Institution, ~Where, ~Details,
+		## "Position" will actually be the project here"
+		"2021-2024", "Detector Dog Phenotype-Genotype Project", "PennVet Working Dog Center", 
+		"Philadelphia, PA", 
+		c("Developed anew C-BARQ-behavior questionnaire for selection and study of detector dogs",
+		"Cleaned and Analyzed data from behavior tests and questionnaires using applicable linear and non-linear models",
+	    "Produced extensively documented, reproducible data sets for collaborators",
+    	"Wrote and maintained R code for analyses and internal reports with version control and emphasis on reusability"),
+		"2018-2021", "Long-Term Behavior and Health Surveillance of Search-and_Rescue Dogs Responding to the 9/11 Attacks", 
+		"PennVet Working Dog Center", "Philadelphia, PA",
+		c("Planned project and obtained funding from the AKC Canine Health Foundation",
+		"Analyzed survival data comparing search-and-rescue dogs that responded to 9/11 with non-deployed dogs ",
+		"Compared causes of death between deployed and non-deployed dogs",
+		"Fitted generalized additive models to compare how C-BARQ measures differed between deployed and non-deployed dogs"),
+		"2015-2021", "C-BARQ Traits in Working Dog Populations", "PennVet Working Dog Center",
+		"Philadelphia, PA",
+		c("Used statistical models to compare C-BARQ traits in dog populations",
+		"Search-and-rescue and pet dogs",
+		"Explosive detection and service dogs in a prison puppy program"),
+		"2015-2023", "Breeding and Selection Advice", "PennVet Working Dog Center",
+		"Philadelphia, PA", 
+		c("Calculated estimated breeding values (EBV) for selectively breeding odor detection dogs"),
+		"2013-2015", "Genetics Consultation and Teaching", 
+		"Leader Dogs for the Blind", "Rochester Hills, MI",
+		c("Cleaned and organized pedigree, behavior, and health data",
+		"Estimated heritabilities of key traits to assess potential results of selection",
+		"Calculated EBVs and selection indices used to plan breedings",
+		"Taught breeding manager to clean and analyze data and use it to calculate EBVs; provided extensive and detailed written documentation"),
+		"2010-2013", "Lead, DHS-Funded Genetics and Genomics Project",
+		"TSA Canine Breeding and Development Center", "San Antonio, TX",
+		c("Proposed and received funding for multi-year study of behavior and health genetics and genomics of explosives detector dogs",
+		"Analyzed heritabilities of work-related behaviors",
+		"Calculated EBVs and selection indices to identify dogs with the highest genetic potential to retain as breeding stock",
+		"Used genotype data to screen for  genomic regions associated with key behaviors",
+		"Collaborated in an analysis to find genomic regions associated with acceptance for further training",
+    	"Supervised a Research Coordinator who built a database, entered behavior and health data, and collected and shipped DNA samples for genotyping"))
+		
+DGdataFrame %>%
+  detailed_entries(
+    where = Position, # first entry, in bold
+    what = Institution, # second entry, in regular text
+    when = Year, # year placed in the margin
+    with = Where, # last entry, in parentheses
+    why = Details # list of items
+  )
+
+```
+
+
+### Previous Positions Held
+	
+
+```{r}
+### UT
+UTdataFrame <-
+    tribble(
+        ~Year, ~Position, ~Institution, ~Where, ~Details,
+        "2006-2010", "Postdoctoral Associate/Research Associate Professor",
+        "South Texas Psychiatric Genetics Research Center", "San Antonio, TX",
+        c("Organized and cleaned data from multi-site international studies including human pedigrees, diagnoses, and measured behavioral phenotypes",
+          "Estimated heritabilities of the age of onset of schizophrenia and personality traits in families affected by bipolar disorder",
+          "Provided statistical analyses for studies of genetic linkage and association and behavioral phenotypes (anxiety, substance use)"))
+UTdataFrame %>%
+  detailed_entries(
+    where = Position, # first entry, in bold
+    what = Institution, # second entry, in regular text
+    when = Year, # year placed in the margin
+    with = Where, # last entry, in parentheses
+    why = Details # list of items
+  )
+
+### USDA
+USDAdataFrame <-
+    tribble(
+        ~Year, ~Position, ~Institution, ~Where, ~Details,
+        "2002-2004", "Research Geneticist", "USDA Animal Improvement Programs Laboratory",
+        "Beltsville, MD",
+        c("Analyzed rates of participation in dairy phenotype testing ",
+          "Characterized the US dairy cattle population by describing trends in length of herd testing participation and calving intervals"))
+USDAdataFrame %>%
+  detailed_entries(
+    where = Position, # first entry, in bold
+    what = Institution, # second entry, in regular text
+    when = Year, # year placed in the margin
+    with = Where, # last entry, in parentheses
+    why = Details # list of items
+  )
+
+
+
+
+### Cornell
+CornellDataFrame <-
+  tribble(
+    ~Year, ~Position, ~Institution, ~Where, ~Details,
+    "1998-2002", "Research Associate", "Animal Breeding and Genetics Group, Cornell University", "Ithaca, NY",
+    c("Designed and taught distance education courses in canine and feline genetics",
+      "Implemented animal model and other statistical analyses for livestock research"))
+
+# resource: https://pkg.mitchelloharawild.com/vitae/reference/cv_entries.html
+CornellDataFrame %>%
+  detailed_entries(
+    where = Position, # first entry, in bold
+    what = Institution, # second entry, in regular text
+    when = Year, # year placed in the margin
+    with = Where, # last entry, in parentheses 
+   why = Details # list of items
+  )
+```
+
+
+## Volunteer Positions
+
+```{r, vol}
+
+tribble(
+  ~Year, ~Position, ~Org,
+  "2022-2025", "Assistant Director, Data Management and Open Science", "ManyDogs Project",
+  "2023-2025", "Co-Lead, Accessibility Working Group", "The Turing Way",
+  "2022-2024", "Book Dash Organizing Committee", "The Turing Way",
+  "2019-2024", "Conference and Accessibility Teams", "FORWARDS Taskforce for Women and Other Underrepresented Minorities",
+  "2010-2020", "Conference Organization, Grant Writing", "PennVet Working Dog Center"
+) %>%
+    brief_entries(
+    #glue::glue("{Position} at {Org}"),
+    what = Position,
+    when = Year,
+    with = Org
+  )
+
+```
+
+## Recent Awards and Financial Support
+
+``` {r, awards}
+
+tribble(
+~Year, ~Award, ~Org,
+"2024","Highly Commended", "Hidden REF", 
+"2024", "rOpenSci Champions Program", "rOpenSci",
+"2024", "Co-Host of The Turing Way Fireside Chat: Evolving Open Science and Research Software Communities for Accessibility and Inclusion", "Society of Research Software Engineering"
+) %>%
+    brief_entries(
+    #glue::glue("{Position} at {Org}"),
+    what = Award,,
+    when = Year,
+    with = Org
+  ) 
+```
+
+## Education
+
+```{r}
+
+tribble(
+  ~Degree, ~Year, ~Institution, ~Where,
+  "Ph.D., Genetics", 1998, "George Washington University", "Washington, DC",
+  "BA, Biology", 1991, "Bryn Mawr College", "Bryn Mawr, PA"
+  )  %>%
+  detailed_entries(
+    where = Degree, 
+    what = Institution,
+    when = Year, 
+    with = Where
+    )
+  
+```
+
+## Selected Publications
+
+```{r}
+library(dplyr)
+## knitr::write_bib(c("vitae", "tibble"), "citations02.bib")
+
+bibliography_entries("citations02.bib") ##%>%
+##  arrange(desc(author$family), issued)
+
+```
+ 
